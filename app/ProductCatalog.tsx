@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { categories, products } from "@/data/products";
+import { categories, products } from "../data/products";
 
 export function ProductCatalog() {
   const [activeCategory, setActiveCategory] = useState("Todos");

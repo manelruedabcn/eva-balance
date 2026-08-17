@@ -4,7 +4,7 @@ Landing y catálogo de productos de bienestar con enlaces a TikTok Shop.
 
 ## Decisión de publicación
 
-En esta fase, todas las landings y webs del proyecto deben ser completamente estáticas y publicarse mediante GitHub Pages. No se utilizará hosting tradicional, servidor propio, base de datos ni funciones de servidor hasta una fase futura expresamente acordada.
+En esta fase, todas las landings y webs del proyecto deben ser completamente estáticas y publicarse mediante GitHub Pages. No se utilizará hosting tradicional, servidor propio, base de datos ni funciones de servidor hasta una fase futura expresamente acordada. El dominio de producción es `eva-balance.com` y sus DNS se administran desde Arsys.
 
 ## Añadir, quitar u ordenar productos
 
