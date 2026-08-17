@@ -2,6 +2,10 @@
 
 Landing y catálogo de productos de bienestar con enlaces a TikTok Shop.
 
+## Decisión de publicación
+
+En esta fase, todas las landings y webs del proyecto deben ser completamente estáticas y publicarse mediante GitHub Pages. No se utilizará hosting tradicional, servidor propio, base de datos ni funciones de servidor hasta una fase futura expresamente acordada.
+
 ## Añadir, quitar u ordenar productos
 
 Todos los productos están en `data/products.ts`. Cada bloque contiene:
