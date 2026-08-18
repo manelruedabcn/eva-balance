@@ -4,9 +4,7 @@ import Home from "../app/page";
 import "../app/globals.css";
 
 const previewTheme = new URLSearchParams(window.location.search).get("theme");
-if (previewTheme === "turquesa" || previewTheme === "lila") {
-  document.documentElement.dataset.theme = previewTheme;
-}
+document.documentElement.dataset.theme = previewTheme === "turquesa" ? "turquesa" : "lila";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
