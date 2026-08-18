@@ -3,13 +3,21 @@ import { ProductCatalog } from "./ProductCatalog";
 export default function Home() {
   return (
     <main>
-      <aside className="palette-preview" aria-label="Paleta turquesa de la simulación">
+      <aside className="palette-preview palette-turquesa" aria-label="Paleta turquesa de la simulación">
         <strong>Paleta turquesa</strong>
         <span><i style={{ background: "#20A998" }} />Turquesa</span>
         <span><i style={{ background: "#174F49" }} />Verde profundo</span>
         <span><i style={{ background: "#E2F3EE" }} />Verde agua</span>
         <span><i style={{ background: "#FAFBF7" }} />Marfil</span>
         <span><i style={{ background: "#B9DDD5" }} />Salvia</span>
+      </aside>
+      <aside className="palette-preview palette-lila" aria-label="Paleta lila de la simulación">
+        <strong>Paleta lila</strong>
+        <span><i style={{ background: "#9874B8" }} />Lila</span>
+        <span><i style={{ background: "#4E3B62" }} />Ciruela</span>
+        <span><i style={{ background: "#EEE7F4" }} />Lavanda</span>
+        <span><i style={{ background: "#FCFAFD" }} />Marfil</span>
+        <span><i style={{ background: "#D4C3E1" }} />Malva</span>
       </aside>
       <header className="site-header">
         <a className="brand" href="#inicio" aria-label="Eva Balance, inicio"><img src="/logo-eva-balance-clean-v2.png" alt="Eva Balance" /></a>
