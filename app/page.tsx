@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <main>
       <header className="site-header">
-        <a className="brand" href="#inicio" aria-label="Eva Balance, inicio"><img src="/logo-eva-balance-clean-v2.png" alt="Eva Balance" /></a>
+        <a className="brand" href="#inicio" aria-label="Eva Balance, inicio"><img src="/logo-eva-balance-transparent.png" alt="Eva Balance" /></a>
         <nav aria-label="Navegación principal">
           <a href="#catalogo">Productos</a><a href="#sobre-eva">Eva Terapeuta</a><a className="nav-cta" href="#tienda">Ver tienda <span aria-hidden="true">↗</span></a>
         </nav>
@@ -33,7 +33,7 @@ export default function Home() {
         <div className="eva-note"><strong>Empieza con PROTECT.</strong><br />Después vendrán nuevas intenciones.</div>
       </section>
       <section className="shop-cta" id="tienda"><span className="shop-watermark heart-mark" aria-hidden="true" /><h2>PROTECT estará disponible<br />en TikTok Shop.</h2><p>Próximamente podrás consultar allí el precio, la disponibilidad y realizar tu compra.</p><a className="button light" href="#catalogo">Ver PROTECT <span aria-hidden="true">↗</span></a></section>
-      <footer><a className="brand footer-brand" href="#inicio"><img src="/logo-eva-balance-clean-v2.png" alt="Eva Balance" /></a><div><a href="#catalogo">Productos</a><a href="https://www.evaterapeuta.com/">Eva Terapeuta</a><a href="#">TikTok</a></div><small>© {new Date().getFullYear()} Eva Balance · Aviso legal · Privacidad</small></footer>
+      <footer><a className="brand footer-brand" href="#inicio"><img src="/logo-eva-balance-transparent.png" alt="Eva Balance" /></a><div><a href="#catalogo">Productos</a><a href="https://www.evaterapeuta.com/">Eva Terapeuta</a><a href="#">TikTok</a></div><small>© {new Date().getFullYear()} Eva Balance · Aviso legal · Privacidad</small></footer>
     </main>
   );
 }
