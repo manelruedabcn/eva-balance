@@ -1,39 +1,10 @@
-import { ProductCatalog } from "./ProductCatalog";
-
-export default function Home() {
-  return (
-    <main>
-      <header className="site-header">
-        <a className="brand" href="#inicio" aria-label="Eva Balance, inicio"><img src="/logo-eva-balance-transparent.png" alt="Eva Balance" /></a>
-        <nav aria-label="Navegación principal">
-          <a href="#catalogo">Productos</a><a href="#sobre-eva">Eva Terapeuta</a><a className="nav-cta" href="#tienda">Ver tienda <span aria-hidden="true">↗</span></a>
-        </nav>
-      </header>
-      <section className="hero" id="inicio">
-        <span className="hero-watermark heart-mark" aria-hidden="true" />
-        <div className="hero-copy">
-          <span className="hero-heart heart-mark" aria-hidden="true" />
-          <h1>Tu intención.<br /><em>Contigo.</em></h1>
-          <p className="hero-text">PROTECT es un ritual de protección consciente creado por Eva. Un gesto para poner límite al ruido, las prisas y aquello que te aleja de tu centro.</p>
-          <div className="hero-actions"><a className="button primary" href="#catalogo">Ver el kit</a><a className="text-link" href="#como-funciona">Cómo funciona</a></div>
-          <div className="hero-proof"><span>Esencia PROTECT</span><span>Colgante difusor</span><span>Ritual de Eva</span></div>
-        </div>
-      </section>
-      <ProductCatalog />
-      <section className="simple-process" aria-labelledby="como-funciona" id="como-funciona">
-        <p className="eyebrow">Tu ritual PROTECT</p><h2>Protección con intención</h2>
-        <div className="steps"><div><b>1</b><h3>Prepara</h3><p>Abre el colgante e impregna el pad con unas gotas de PROTECT.</p></div><div><b>2</b><h3>Intenciona</h3><p>Haz una pausa y conecta con aquello que hoy quieres proteger.</p></div><div><b>3</b><h3>Llévalo</h3><p>Cierra el colgante y úsalo como recordatorio de tu intención durante el día.</p></div></div>
-      </section>
-      <section className="protect-story">
-        <p className="eyebrow">Qué incluye</p><h2>Esencia, objeto<br />e intención.</h2>
-        <div className="included"><div><b>01</b><h3>PROTECT</h3><p>Un frasco de 10 ml con la primera esencia diseñada por Eva Balance.</p></div><div><b>02</b><h3>El colgante</h3><p>Un difusor reutilizable, redondo o cilíndrico, con un pad interior.</p></div><div><b>03</b><h3>El ritual</h3><p>Una guía creada por Eva para utilizar PROTECT según tu intención.</p></div></div>
-      </section>
-      <section className="eva-section" id="sobre-eva">
-        <div className="eva-card"><p className="eyebrow">Creada por Eva</p><h2>Cada esencia nace de una intención.</h2><p>PROTECT abre la colección Eva Balance. Más adelante llegarán nuevas esencias, cada una acompañada de un ritual diferente para el momento que quieras crear.</p><a className="button secondary" href="https://www.evaterapeuta.com/" target="_blank" rel="noreferrer">Conocer Eva Terapeuta <span aria-hidden="true">↗</span></a></div>
-        <div className="eva-note"><strong>Empieza con PROTECT.</strong><br />Después vendrán nuevas intenciones.</div>
-      </section>
-      <section className="shop-cta" id="tienda"><span className="shop-watermark heart-mark" aria-hidden="true" /><h2>PROTECT estará disponible<br />en TikTok Shop.</h2><p>Próximamente podrás consultar allí el precio, la disponibilidad y realizar tu compra.</p><a className="button light" href="#catalogo">Ver PROTECT <span aria-hidden="true">↗</span></a></section>
-      <footer><a className="brand footer-brand" href="#inicio"><img src="/logo-eva-balance-transparent.png" alt="Eva Balance" /></a><div><a href="#catalogo">Productos</a><a href="https://www.evaterapeuta.com/">Eva Terapeuta</a><a href="#">TikTok</a></div><small>© {new Date().getFullYear()} Eva Balance · Aviso legal · Privacidad</small></footer>
-    </main>
-  );
-}
+import {Heart,PageShell,whatsapp} from "./SiteShell";
+export default function Home(){return <PageShell><main>
+<section className="ecosystem-hero"><Heart className="hero-large-heart"/><div className="ecosystem-hero-copy"><p className="section-kicker">Eva Balance · Eva Terapeuta</p><h1>Un espacio para<br/><em>volver a ti.</em></h1><p className="hero-lead">Sesiones con Eva y una selección consciente de aromas y objetos que acompañan tu intención. Dos caminos distintos, unidos por una misma forma de cuidarte.</p><div className="hero-paths"><a className="path-button path-primary" href="/sesiones/"><span>Quiero sentirme acompañada</span><b>Conocer las sesiones <i>↗</i></b></a><a className="path-button" href="/productos/"><span>Quiero llevar mi intención conmigo</span><b>Descubrir los productos <i>↗</i></b></a></div></div></section>
+<section className="manifesto-strip"><p>Tu bienestar no se compra.</p><Heart/><p>Tu intención se cultiva.</p><Heart/><p>Eva te acompaña.</p></section>
+<section className="two-worlds section-wrap"><div className="section-intro"><p className="section-kicker">Un mismo ecosistema</p><h2>Lo que necesitas puede cambiar.<br/><em>La intención permanece.</em></h2></div><div className="world-grid"><article className="world-card therapy-world"><div className="world-number">01</div><div><p className="card-kicker">Sesiones con Eva</p><h3>Un espacio para escucharte.</h3><p>Acompañamiento individual y grupal mediante LNT® y Barras de Access Consciousness®. Presencial en Barcelona y Garraf, y online.</p><a className="text-arrow" href="/sesiones/">Explorar las sesiones <span>→</span></a></div></article><article className="world-card product-world"><div className="world-number">02</div><div><p className="card-kicker">Productos con intención</p><h3>Pequeños gestos para tu día.</h3><p>Esencias, joyas aromáticas y objetos seleccionados por Eva. Pocas piezas, elegidas con criterio, para acompañar una pausa consciente.</p><a className="text-arrow" href="/productos/">Descubrir la colección <span>→</span></a></div></article></div></section>
+<section className="eva-home section-wrap" id="sobre-eva"><div className="eva-portrait-wrap"><img src="/eva/eva-terapeuta.jpg" alt="Eva, terapeuta y creadora de Eva Balance"/><div className="portrait-caption"><Heart/><span>Eva Garijo<br/>Terapeuta y creadora</span></div></div><div className="eva-home-copy"><p className="section-kicker">La persona detrás de la marca</p><h2>Eva acompaña.<br/><em>Eva Balance reúne.</em></h2><p className="large-copy">Llegué a la LNT como paciente. Aquella experiencia cambió mi forma de entender el cuerpo, la energía y el bienestar. Desde entonces acompaño a otras personas con honestidad, presencia y sin promesas vacías.</p><p>Eva Balance nace para reunir ese acompañamiento con una selección de objetos y aromas que forman parte de mi forma de vivir: menos ruido, más intención y pequeños recordatorios para volver al centro.</p><div className="credential-row"><span>LNT®</span><span>Barras de Access</span><span>+500 sesiones</span><span>Presencial y online</span></div><a className="outline-button" href="/sesiones/#sobre-eva">Conocer mi historia</a></div></section>
+<section className="featured-protect"><div className="protect-orbit"><Heart/></div><div className="featured-copy"><p className="section-kicker">Primera intención</p><h2>PROTECT</h2><p>Una mezcla aromática creada para acompañar una pausa consciente y recordar tu intención de protección.</p><div className="featured-actions"><a className="light-button" href="/productos/">Conocer PROTECT</a><a href="/protect/">Ver el momento PROTECT →</a></div></div></section>
+<section className="principles section-wrap"><div className="section-intro compact"><p className="section-kicker">Nuestra forma de hacer</p><h2>Honestidad antes que promesas.</h2></div><div className="principle-grid"><div><span>01</span><h3>Dos propuestas independientes</h3><p>No necesitas comprar ningún producto para realizar una sesión. Cada camino tiene su propio lugar.</p></div><div><span>02</span><h3>Selección consciente</h3><p>No queremos ser un bazar. Elegimos pocas referencias, coherentes y explicadas con transparencia.</p></div><div><span>03</span><h3>Sin soluciones mágicas</h3><p>Las sesiones complementan, no sustituyen, la atención médica. Los productos acompañan una intención; no prometen sanar.</p></div></div></section>
+<section className="conversation-cta"><Heart/><p className="section-kicker">¿No sabes por dónde empezar?</p><h2>Cuéntame qué necesitas.<br/><em>Te escucho.</em></h2><a className="light-button" href={whatsapp} target="_blank" rel="noreferrer">Hablar con Eva por WhatsApp</a></section>
+</main></PageShell>}

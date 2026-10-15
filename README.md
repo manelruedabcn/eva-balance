@@ -1,45 +1,25 @@
 # Eva Balance
 
-Landing y catálogo de productos de bienestar con enlaces a TikTok Shop.
+Web unificada de **Eva Balance | Eva Terapeuta**.
 
-## Decisión de publicación
+## Arquitectura
 
-En esta fase, todas las landings y webs del proyecto deben ser completamente estáticas y publicarse mediante GitHub Pages. No se utilizará hosting tradicional, servidor propio, base de datos ni funciones de servidor hasta una fase futura expresamente acordada. El dominio de producción es `eva-balance.com` y sus DNS se administran desde Arsys.
+- `/`: portada del ecosistema y acceso a sus dos recorridos.
+- `/sesiones/`: sesiones individuales y grupales, herramientas, Eva, precios y preguntas frecuentes.
+- `/productos/`: PROTECT, esencias, joyas aromáticas y futuras colecciones.
+- `/protect/`: guía vinculada al QR de la esencia PROTECT.
 
-## Añadir, quitar u ordenar productos
+## Publicación
 
-Todos los productos están en `data/products.ts`. Cada bloque contiene:
-
-- `name`: nombre del producto.
-- `category`: categoría usada por los filtros.
-- `description`: texto breve de la ficha.
-- `intention`: intención asociada a la esencia.
-- `ritual`: explicación breve del ritual que la acompaña.
-- `price`: precio o texto alternativo.
-- `image`: dirección de la imagen.
-- `tiktokUrl`: enlace directo del producto en TikTok Shop.
-- `featured`: muestra la etiqueta «Selección de Eva» cuando vale `true`.
-
-Para quitar un producto, elimina su bloque. Para cambiar el orden, mueve el bloque dentro de la lista. Las categorías se crean automáticamente.
-
-## Ejecutar en local
+La web es completamente estática y se publica en GitHub Pages mediante `.github/workflows/deploy-pages.yml`. El dominio de producción es `eva-balance.com`.
 
 ```bash
-npm install
-npm run dev
-```
-
-La web estará disponible en `http://localhost:3000`.
-
-## Comprobar antes de publicar
-
-```bash
+npm ci
 npm run build
 ```
 
-## Pendiente antes del lanzamiento
+La salida final se genera en `dist/`.
 
-- Sustituir los productos de muestra por los definitivos.
-- Añadir los enlaces reales de TikTok Shop, TikTok e Instagram.
-- Completar aviso legal y política de privacidad.
-- Conectar el dominio cuando esté contratado.
+## Criterio de marca
+
+Eva es el rostro y la persona que genera confianza. Eva Balance organiza el ecosistema. Las sesiones y los productos son propuestas independientes: los productos no son necesarios para realizar una sesión y no sustituyen tratamientos ni asesoramiento médico.

@@ -10,6 +10,8 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, "index.html"),
         protect: resolve(__dirname, "protect/index.html"),
+        sesiones: resolve(__dirname, "sesiones/index.html"),
+        productos: resolve(__dirname, "productos/index.html"),
       },
     },
   },
