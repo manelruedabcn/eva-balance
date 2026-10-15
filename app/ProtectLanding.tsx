@@ -14,6 +14,10 @@ export function ProtectLanding() {
         <h1>Tu intención.<br /><em>Contigo.</em></h1>
         <p className="moment-intro">
           Una pausa breve para volver a tu centro y recordar aquello que hoy quieres proteger.
+          PROTECT acompaña tus momentos cotidianos con un ritual de aroma, respiración e intención.
+          Puedes incorporarlo al comenzar el día, antes de una conversación importante o cuando
+          necesites detenerte, escucharte y recuperar la calma. No hace falta hacerlo perfecto:
+          bastan unos minutos, un espacio tranquilo y la intención que quieras cuidar.
         </p>
         <a className="button primary" href="#guia">Comenzar</a>
       </section>
