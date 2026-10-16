@@ -20,7 +20,7 @@ function shell({title,description,canonical,jsonLd}){return `<!doctype html>
     <meta property="og:image" content="https://eva-balance.com/og-eva-balance.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Eva Garijo, terapeuta LNT® y Barras de Access en Barcelona y Garraf" />
+    <meta property="og:image:alt" content="Eva Garijo, terapeuta LNT® y Barras de Access en Barcelona y Sitges" />
     <meta property="og:site_name" content="Eva Balance" />
     <meta property="og:locale" content="es_ES" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -36,7 +36,7 @@ function shell({title,description,canonical,jsonLd}){return `<!doctype html>
 await mkdir(resolve("blog"),{recursive:true});
 await writeFile(resolve("blog/index.html"),shell({
   title:"Blog de bienestar consciente | Eva Balance",
-  description:"Artículos de Eva Garijo sobre LNT®, Barras de Access, presencia y autocuidado. Una mirada clara y responsable desde Barcelona y el Garraf.",
+  description:"Artículos de Eva Garijo sobre LNT®, Barras de Access, presencia y autocuidado. Una mirada clara y responsable desde Barcelona y Sitges.",
   canonical:"https://eva-balance.com/blog/",
   jsonLd:{"@context":"https://schema.org","@type":"Blog","name":"Blog Eva Balance","url":"https://eva-balance.com/blog/","description":"Artículos sobre LNT®, presencia, sesiones y autocuidado."},
 }));
