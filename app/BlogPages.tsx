@@ -46,7 +46,7 @@ export function getFaq(post:BlogPost):Faq[]{return (post as {faq?:Faq[]}).faq??[
 function FaqSection({post}:{post:BlogPost}){
   const faq=getFaq(post);
   if(faq.length===0)return null;
-  return <section className="article-faq"><h2>Preguntas frecuentes</h2>{faq.map(item=><details key={item.q}><summary>{item.q}</summary><p>{item.a}</p></details>)}</section>;
+  return <section className="article-faq"><h2>Preguntas frecuentes</h2>{faq.map(item=><details key={item.q}><summary>{item.q}</summary><p><RichText text={item.a}/></p></details>)}</section>;
 }
 function formatDate(date:string){return new Intl.DateTimeFormat("es-ES",{day:"numeric",month:"long",year:"numeric",timeZone:"UTC"}).format(new Date(`${date}T00:00:00Z`))}
 export{posts};
