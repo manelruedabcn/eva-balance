@@ -4,6 +4,7 @@ import Home from "../app/page";
 import {ProtectLanding} from "../app/ProtectLanding";
 import {ProductsPage} from "../app/ProductsPage";
 import {SessionsPage} from "../app/SessionsPage";
+import {BlogArticle,BlogIndex,getBlogPost} from "../app/BlogPages";
 
 const pages: Record<string, React.ComponentType> = {
   "/": Home,
@@ -13,6 +14,8 @@ const pages: Record<string, React.ComponentType> = {
 };
 
 export function render(pathname: string) {
-  const Page=pages[pathname]??Home;
+  const blogPost=getBlogPost(pathname);
+  if(blogPost)return renderToStaticMarkup(<BlogArticle post={blogPost}/>);
+  const Page=pathname==="/blog/"?BlogIndex:pages[pathname]??Home;
   return renderToStaticMarkup(<Page/>);
 }
