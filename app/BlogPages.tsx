@@ -22,7 +22,7 @@ export function BlogArticle({post}:{post:BlogPost}){return <PageShell><main clas
   <section className="related-posts section-wrap"><p className="section-kicker">También puede interesarte</p><div className="related-grid">{relatedPosts(post).map(item=><article key={item.slug}><span>{item.category}</span><h2><a href={`/blog/${item.slug}/`}>{item.title}</a></h2><a className="text-arrow" href={`/blog/${item.slug}/`}>Leer <span>→</span></a></article>)}</div></section>
 </main></PageShell>}
 
-function AuthorBox(){return <aside className="article-author" aria-label="Sobre la autora"><img src="/eva/eva-terapeuta.jpg" alt="Eva Garijo" width="96" height="96" loading="lazy"/><div><p className="article-author-kicker">Escrito por</p><p className="article-author-name">Eva Garijo</p><p>Terapeuta LNT® y practitioner de Barras de Access. Llegué a la LNT como paciente y hoy acompaño sesiones en el Eixample de Barcelona, en Sitges y a distancia.</p><a href="/sesiones/#sobre-eva">Conocer a Eva →</a></div></aside>}
+function AuthorBox(){return <aside className="article-author" aria-label="Sobre la autora"><img src="/eva/eva-terapeuta.jpg" alt="Eva Garijo" width="96" height="96" loading="lazy"/><div><p className="article-author-kicker">Escrito por</p><p className="article-author-name">Eva Garijo</p><p>Terapeuta LNT® y titulada en Barras de Access (nivel 1). Llegué a la LNT como paciente y hoy acompaño sesiones en el Eixample de Barcelona, en Sitges y a distancia.</p><a href="/sesiones/#sobre-eva">Conocer a Eva →</a></div></aside>}
 
 /** Convierte enlaces con formato [texto](/ruta/) en <a>. */
 function RichText({text}:{text:string}){
