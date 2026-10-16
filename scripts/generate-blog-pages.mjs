@@ -17,7 +17,13 @@ function shell({title,description,canonical,jsonLd}){return `<!doctype html>
     <meta property="og:description" content="${description}" />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="${canonical}" />
-    <meta name="twitter:card" content="summary" />
+    <meta property="og:image" content="https://eva-balance.com/og-eva-balance.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Eva Garijo, terapeuta LNT® y Barras de Access en Barcelona y Garraf" />
+    <meta property="og:site_name" content="Eva Balance" />
+    <meta property="og:locale" content="es_ES" />
+    <meta name="twitter:card" content="summary_large_image" />
     <script type="application/ld+json">${JSON.stringify(jsonLd).replace(/</g,"\\u003c")}</script>
     <title>${title}</title>
   </head>
@@ -30,7 +36,7 @@ function shell({title,description,canonical,jsonLd}){return `<!doctype html>
 await mkdir(resolve("blog"),{recursive:true});
 await writeFile(resolve("blog/index.html"),shell({
   title:"Blog de bienestar consciente | Eva Balance",
-  description:"Artículos de Eva Balance sobre LNT®, presencia, sesiones y autocuidado desde una mirada clara y responsable.",
+  description:"Artículos de Eva Garijo sobre LNT®, Barras de Access, presencia y autocuidado. Una mirada clara y responsable desde Barcelona y el Garraf.",
   canonical:"https://eva-balance.com/blog/",
   jsonLd:{"@context":"https://schema.org","@type":"Blog","name":"Blog Eva Balance","url":"https://eva-balance.com/blog/","description":"Artículos sobre LNT®, presencia, sesiones y autocuidado."},
 }));
@@ -43,6 +49,16 @@ for(const post of posts){
     title:`${post.title} | Eva Balance`,
     description:post.description,
     canonical,
-    jsonLd:{"@context":"https://schema.org","@type":"BlogPosting","headline":post.title,"description":post.description,"datePublished":post.date,"dateModified":post.date,"author":{"@type":"Person","name":"Eva Garijo"},"publisher":{"@type":"Organization","name":"Eva Balance","url":"https://eva-balance.com/"},"mainEntityOfPage":canonical},
+    jsonLd:{"@context":"https://schema.org","@type":"BlogPosting","headline":post.title,"description":post.description,"datePublished":post.date,"dateModified":post.date,"inLanguage":"es","image":"https://eva-balance.com/og-eva-balance.jpg","articleSection":post.category,"author":{"@type":"Person","@id":"https://eva-balance.com/#eva","name":"Eva Garijo","jobTitle":"Terapeuta LNT® y practitioner de Barras de Access","url":"https://eva-balance.com/sesiones/#sobre-eva"},"publisher":{"@type":"Organization","name":"Eva Balance","url":"https://eva-balance.com/","logo":{"@type":"ImageObject","url":"https://eva-balance.com/logo-eva-balance-transparent.png"}},"mainEntityOfPage":canonical},
   }));
 }
+
+// Sitemap generado automáticamente: cada artículo nuevo de content/blog-posts.json entra solo.
+const latest=posts.map(post=>post.date).sort().at(-1);
+const staticUrls=[["/","1.0",latest],["/sesiones/","0.9",latest],["/productos/","0.8",latest],["/protect/","0.5",latest],["/blog/","0.8",latest]];
+const urls=[...staticUrls,...posts.map(post=>[`/blog/${post.slug}/`,"0.7",post.date])];
+await writeFile(resolve("public/sitemap.xml"),`<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${urls.map(([path,priority,lastmod])=>`  <url><loc>https://eva-balance.com${path}</loc><lastmod>${lastmod}</lastmod><priority>${priority}</priority></url>`).join("\n")}
+</urlset>
+`);
