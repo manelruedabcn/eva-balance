@@ -7,6 +7,7 @@ const routes = [
   ["/", "dist/index.html"],
   ["/productos/", "dist/productos/index.html"],
   ["/protect/", "dist/protect/index.html"],
+  ["/privacidad/", "dist/privacidad/index.html"],
   ["/sesiones/", "dist/sesiones/index.html"],
   ["/blog/", "dist/blog/index.html"],
   ...posts.map(post=>[`/blog/${post.slug}/`,`dist/blog/${post.slug}/index.html`]),
