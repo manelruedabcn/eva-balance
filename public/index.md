@@ -4,7 +4,7 @@ Eva Balance reúne dos caminos distintos unidos por una misma forma de cuidarte:
 
 ## Sesiones con Eva
 
-Un espacio de acompañamiento individual y grupal mediante LNT® y Barras de Access Consciousness®. Las sesiones pueden ser presenciales en Barcelona y Garraf, o a distancia.
+Un espacio de acompañamiento individual y grupal mediante LNT® y Barras de Access Consciousness®. Las sesiones pueden ser presenciales en Barcelona (Eixample) y Sitges, o a distancia.
 
 [Conocer las sesiones](https://eva-balance.com/sesiones/)
 
@@ -52,4 +52,4 @@ Las sesiones son complementarias y no sustituyen la atención médica. Los produ
 
 [Hablar con Eva por WhatsApp](https://wa.me/34629764705?text=Hola%20Eva%2C%20me%20gustar%C3%ADa%20m%C3%A1s%20informaci%C3%B3n)
 
-Ámbito de atención: Barcelona, Garraf y a distancia.
+Ámbito de atención: Barcelona (Eixample), Sitges y a distancia.
