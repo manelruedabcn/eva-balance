@@ -17,7 +17,7 @@ export function BlogIndex(){return <PageShell><main className="blog-page">
 export function BlogArticle({post}:{post:BlogPost}){return <PageShell><main className="article-page">
   <article>
     <header className="article-header"><a className="article-back" href="/blog/">← Volver al blog</a><div className="article-meta"><span>{post.category}</span><time dateTime={post.date}>{formatDate(post.date)}</time><span>{post.readingTime} de lectura</span></div><h1>{post.title}</h1><p>{post.description}</p></header>
-    <div className="article-layout"><div className="article-body"><p className="article-intro"><RichText text={post.intro}/></p>{post.sections.map(section=><section key={section.heading}><h2>{section.heading}</h2>{section.paragraphs.map(paragraph=><p key={paragraph}><RichText text={paragraph}/></p>)}</section>)}<aside className="article-note"><strong>Una mirada responsable</strong><p>Las sesiones de Eva Balance son complementarias y no sustituyen la atención médica, psicológica o de otros profesionales sanitarios.</p></aside><AuthorBox/></div><aside className="article-cta"><p className="section-kicker">Sesiones con Eva</p><h2>Un espacio para parar y escucharte.</h2><p>LNT® y Barras de Access, presencial en Barcelona (Eixample) y Sitges, o a distancia con instrucciones sencillas.</p><a className="solid-button" href="/sesiones/#precios">Ver sesiones y precios</a><a className="article-cta-secondary" href={whatsapp} target="_blank" rel="noreferrer">Hablar con Eva por WhatsApp →</a></aside></div>
+    <div className="article-layout"><div className="article-body"><p className="article-intro"><RichText text={post.intro}/></p>{post.sections.map(section=><section key={section.heading}><h2>{section.heading}</h2>{section.paragraphs.map(paragraph=><p key={paragraph}><RichText text={paragraph}/></p>)}</section>)}<FaqSection post={post}/><aside className="article-note"><strong>Una mirada responsable</strong><p>Las sesiones de Eva Balance son complementarias y no sustituyen la atención médica, psicológica o de otros profesionales sanitarios.</p></aside><AuthorBox/></div><aside className="article-cta"><p className="section-kicker">Sesiones con Eva</p><h2>Un espacio para parar y escucharte.</h2><p>LNT® y Barras de Access, presencial en Barcelona (Eixample) y Sitges, o a distancia con instrucciones sencillas.</p><a className="solid-button" href="/sesiones/#precios">Ver sesiones y precios</a><a className="article-cta-secondary" href={whatsapp} target="_blank" rel="noreferrer">Hablar con Eva por WhatsApp →</a></aside></div>
   </article>
   <section className="related-posts section-wrap"><p className="section-kicker">También puede interesarte</p><div className="related-grid">{relatedPosts(post).map(item=><article key={item.slug}><span>{item.category}</span><h2><a href={`/blog/${item.slug}/`}>{item.title}</a></h2><a className="text-arrow" href={`/blog/${item.slug}/`}>Leer <span>→</span></a></article>)}</div></section>
 </main></PageShell>}
@@ -30,11 +30,23 @@ function RichText({text}:{text:string}){
   return <>{parts.map((part,index)=>{const match=/^\[([^\]]+)\]\(([^)]+)\)$/.exec(part);return match?<a key={index} href={match[2]}>{match[1]}</a>:part})}</>;
 }
 
+// Relacionados: los siguientes de la misma categoría (en rueda, para que no
+// salgan siempre los mismos) y, si faltan, de otras categorías.
 function relatedPosts(post:BlogPost){
-  const others=posts.filter(item=>item.slug!==post.slug);
-  const sameCategory=others.filter(item=>item.category===post.category);
-  const rest=others.filter(item=>item.category!==post.category);
-  return [...sameCategory,...rest].slice(0,2);
+  const same=posts.filter(item=>item.category===post.category);
+  const at=same.findIndex(item=>item.slug===post.slug);
+  const sameRotated=[...same.slice(at+1),...same.slice(0,at)];
+  const rest=posts.filter(item=>item.category!==post.category);
+  return [...sameRotated,...rest].slice(0,2);
+}
+
+type Faq={q:string;a:string};
+export function getFaq(post:BlogPost):Faq[]{return (post as {faq?:Faq[]}).faq??[]}
+
+function FaqSection({post}:{post:BlogPost}){
+  const faq=getFaq(post);
+  if(faq.length===0)return null;
+  return <section className="article-faq"><h2>Preguntas frecuentes</h2>{faq.map(item=><details key={item.q}><summary>{item.q}</summary><p>{item.a}</p></details>)}</section>;
 }
 function formatDate(date:string){return new Intl.DateTimeFormat("es-ES",{day:"numeric",month:"long",year:"numeric",timeZone:"UTC"}).format(new Date(`${date}T00:00:00Z`))}
 export{posts};
