@@ -15,6 +15,7 @@ export default defineConfig({
         protect: resolve(__dirname, "protect/index.html"),
         sesiones: resolve(__dirname, "sesiones/index.html"),
         productos: resolve(__dirname, "productos/index.html"),
+        privacidad: resolve(__dirname, "privacidad/index.html"),
         blog: resolve(__dirname, "blog/index.html"),
         ...blogInputs,
       },
