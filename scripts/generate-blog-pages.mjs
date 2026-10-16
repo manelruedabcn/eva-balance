@@ -38,18 +38,22 @@ await writeFile(resolve("blog/index.html"),shell({
   title:"Blog de bienestar consciente | Eva Balance",
   description:"Artículos de Eva Garijo sobre LNT®, Barras de Access, presencia y autocuidado. Una mirada clara y responsable desde Barcelona y Sitges.",
   canonical:"https://eva-balance.com/blog/",
-  jsonLd:{"@context":"https://schema.org","@type":"Blog","name":"Blog Eva Balance","url":"https://eva-balance.com/blog/","description":"Artículos sobre LNT®, presencia, sesiones y autocuidado."},
+  jsonLd:{"@context":"https://schema.org","@type":"Blog","name":"Blog Eva Balance","url":"https://eva-balance.com/blog/","description":"Artículos sobre LNT®, Barras de Access, terapias energéticas y autocuidado."},
 }));
 
 for(const post of posts){
   const directory=resolve("blog",post.slug);
   await mkdir(directory,{recursive:true});
   const canonical=`https://eva-balance.com/blog/${post.slug}/`;
+  const article={"@context":"https://schema.org","@type":"BlogPosting","headline":post.title,"description":post.description,"datePublished":post.date,"dateModified":post.date,"inLanguage":"es","image":"https://eva-balance.com/og-eva-balance.jpg","articleSection":post.category,"author":{"@type":"Person","@id":"https://eva-balance.com/#eva","name":"Eva Garijo","jobTitle":"Terapeuta LNT® y practitioner de Barras de Access","url":"https://eva-balance.com/sesiones/#sobre-eva"},"publisher":{"@type":"Organization","name":"Eva Balance","url":"https://eva-balance.com/","logo":{"@type":"ImageObject","url":"https://eva-balance.com/logo-eva-balance-transparent.png"}},"mainEntityOfPage":canonical};
+  // Si el artículo trae preguntas frecuentes, se declaran también como FAQPage.
+  const faq=post.faq??[];
+  const jsonLd=faq.length?{"@context":"https://schema.org","@graph":[{...article,"@context":undefined},{"@type":"FAQPage","mainEntity":faq.map(item=>({"@type":"Question","name":item.q,"acceptedAnswer":{"@type":"Answer","text":item.a}}))}]}:article;
   await writeFile(resolve(directory,"index.html"),shell({
     title:`${post.title} | Eva Balance`,
     description:post.description,
     canonical,
-    jsonLd:{"@context":"https://schema.org","@type":"BlogPosting","headline":post.title,"description":post.description,"datePublished":post.date,"dateModified":post.date,"inLanguage":"es","image":"https://eva-balance.com/og-eva-balance.jpg","articleSection":post.category,"author":{"@type":"Person","@id":"https://eva-balance.com/#eva","name":"Eva Garijo","jobTitle":"Terapeuta LNT® y practitioner de Barras de Access","url":"https://eva-balance.com/sesiones/#sobre-eva"},"publisher":{"@type":"Organization","name":"Eva Balance","url":"https://eva-balance.com/","logo":{"@type":"ImageObject","url":"https://eva-balance.com/logo-eva-balance-transparent.png"}},"mainEntityOfPage":canonical},
+    jsonLd,
   }));
 }
 
