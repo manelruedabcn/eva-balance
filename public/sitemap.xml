@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://eva-balance.com/</loc><priority>1.0</priority></url>
-  <url><loc>https://eva-balance.com/sesiones/</loc><priority>0.9</priority></url>
-  <url><loc>https://eva-balance.com/productos/</loc><priority>0.9</priority></url>
-  <url><loc>https://eva-balance.com/protect/</loc><priority>0.6</priority></url>
-  <url><loc>https://eva-balance.com/blog/</loc><priority>0.8</priority></url>
-  <url><loc>https://eva-balance.com/blog/que-es-lnt-como-es-una-sesion/</loc><priority>0.7</priority></url>
-  <url><loc>https://eva-balance.com/blog/lnt-y-reiki-diferencias/</loc><priority>0.7</priority></url>
-  <url><loc>https://eva-balance.com/blog/cansancio-fisico-o-saturacion-emocional/</loc><priority>0.7</priority></url>
-  <url><loc>https://eva-balance.com/blog/estres-laboral-pausas-y-limites/</loc><priority>0.7</priority></url>
-  <url><loc>https://eva-balance.com/blog/como-prepararte-para-un-momento-importante/</loc><priority>0.7</priority></url>
-  <url><loc>https://eva-balance.com/blog/otono-soltar-y-cambiar-de-ritmo/</loc><priority>0.7</priority></url>
-  <url><loc>https://eva-balance.com/blog/verano-energia-y-descanso-consciente/</loc><priority>0.7</priority></url>
-  <url><loc>https://eva-balance.com/blog/movimientos-involuntarios-durante-lnt/</loc><priority>0.7</priority></url>
-  <url><loc>https://eva-balance.com/blog/como-funciona-una-sesion-a-distancia/</loc><priority>0.7</priority></url>
-  <url><loc>https://eva-balance.com/blog/primera-sesion-lnt-preguntas-frecuentes/</loc><priority>0.7</priority></url>
+  <url><loc>https://eva-balance.com/</loc><lastmod>2026-10-16</lastmod><priority>1.0</priority></url>
+  <url><loc>https://eva-balance.com/sesiones/</loc><lastmod>2026-10-16</lastmod><priority>0.9</priority></url>
+  <url><loc>https://eva-balance.com/productos/</loc><lastmod>2026-10-16</lastmod><priority>0.8</priority></url>
+  <url><loc>https://eva-balance.com/protect/</loc><lastmod>2026-10-16</lastmod><priority>0.5</priority></url>
+  <url><loc>https://eva-balance.com/blog/</loc><lastmod>2026-10-16</lastmod><priority>0.8</priority></url>
+  <url><loc>https://eva-balance.com/blog/barras-de-access-que-son-y-como-es-una-sesion/</loc><lastmod>2026-10-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://eva-balance.com/blog/que-es-lnt-como-es-una-sesion/</loc><lastmod>2026-10-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://eva-balance.com/blog/lnt-y-reiki-diferencias/</loc><lastmod>2026-10-13</lastmod><priority>0.7</priority></url>
+  <url><loc>https://eva-balance.com/blog/cansancio-fisico-o-saturacion-emocional/</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
+  <url><loc>https://eva-balance.com/blog/estres-laboral-pausas-y-limites/</loc><lastmod>2026-10-05</lastmod><priority>0.7</priority></url>
+  <url><loc>https://eva-balance.com/blog/como-prepararte-para-un-momento-importante/</loc><lastmod>2026-10-01</lastmod><priority>0.7</priority></url>
+  <url><loc>https://eva-balance.com/blog/otono-soltar-y-cambiar-de-ritmo/</loc><lastmod>2026-09-28</lastmod><priority>0.7</priority></url>
+  <url><loc>https://eva-balance.com/blog/verano-energia-y-descanso-consciente/</loc><lastmod>2026-09-22</lastmod><priority>0.7</priority></url>
+  <url><loc>https://eva-balance.com/blog/movimientos-involuntarios-durante-lnt/</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
+  <url><loc>https://eva-balance.com/blog/como-funciona-una-sesion-a-distancia/</loc><lastmod>2026-09-14</lastmod><priority>0.7</priority></url>
+  <url><loc>https://eva-balance.com/blog/primera-sesion-lnt-preguntas-frecuentes/</loc><lastmod>2026-09-10</lastmod><priority>0.7</priority></url>
 </urlset>
