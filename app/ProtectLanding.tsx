@@ -5,7 +5,9 @@ export function ProtectLanding() {
         <a href="/" aria-label="Volver a Eva Balance">
           <img src="/logo-eva-balance-transparent.png" alt="Eva Balance" />
         </a>
-        <a className="moment-back" href="/">Volver a Eva Balance</a>
+        <nav aria-label="Navegación de Momento PROTECT">
+          <a className="moment-back" href="/">Volver a Eva Balance</a>
+        </nav>
       </header>
 
       <section className="moment-hero">
