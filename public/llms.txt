@@ -1,0 +1,24 @@
+# Eva Balance
+
+> Eva Balance ofrece sesiones individuales y grupales con Eva Garijo, presenciales en Barcelona y Garraf o a distancia, junto con una selección independiente de productos aromáticos y objetos con intención.
+
+El sitio presenta los servicios de acompañamiento de Eva, sus modalidades, precios y preguntas frecuentes, además de la colección de productos y la guía de uso responsable de PROTECT. Las sesiones y los productos son propuestas independientes. Las sesiones complementan y no sustituyen la atención médica; los productos no prometen sanar.
+
+## Contenido principal
+
+- [Eva Balance](https://eva-balance.com/index.md): Presentación general, principios, servicios, productos y contacto en formato Markdown.
+- [Sesiones con Eva](https://eva-balance.com/sesiones/): Sesiones individuales y grupales mediante LNT® y Barras de Access Consciousness®, presenciales o a distancia.
+- [Productos con intención](https://eva-balance.com/productos/): Colección de aromas y objetos seleccionados por Eva, incluida la esencia PROTECT.
+- [Momento PROTECT](https://eva-balance.com/protect/): Guía de uso y seguridad de la esencia para difusor PROTECT.
+
+## Información esencial
+
+- Responsable: Eva Garijo, terapeuta y creadora de Eva Balance.
+- Área presencial: Barcelona y Garraf, España.
+- Modalidad adicional: sesiones a distancia.
+- Idioma principal: español.
+- Sitio canónico: https://eva-balance.com/
+
+## Contacto
+
+- [WhatsApp de Eva Balance](https://wa.me/34629764705?text=Hola%20Eva%2C%20me%20gustar%C3%ADa%20m%C3%A1s%20informaci%C3%B3n): Canal de contacto para solicitar información sobre sesiones y productos.
