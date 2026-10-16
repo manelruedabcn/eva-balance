@@ -1,12 +1,12 @@
 import {PageShell} from "./SiteShell";
 import "./legal.css";
 
-// Datos del titular. Rellenar antes de publicar (aparecen en el aviso legal y como responsable del tratamiento).
+// Datos del titular (aviso legal y responsable del tratamiento).
 const TITULAR={
-  nombre:"Eva Garijo [APELLIDOS COMPLETOS]",
-  nif:"[NIF]",
-  domicilio:"[DIRECCIÓN POSTAL COMPLETA]",
-  email:"[CORREO DE CONTACTO]",
+  nombre:"Eva Garijo Clará",
+  nif:"38115366L",
+  domicilio:"Carrer Riu Clar, 4, 08800 Vilanova i la Geltrú (Barcelona)",
+  email:"hola@eva-balance.com",
 };
 const ACTUALIZADA="16 de octubre de 2026";
 
