@@ -7,6 +7,7 @@ import {SessionsPage} from "../app/SessionsPage";
 import {PrivacyPage} from "../app/PrivacyPage";
 import {BlogArticle,BlogIndex,getBlogPost} from "../app/BlogPages";
 import "../app/globals.css";
+import "../app/isotipo.css";
 document.documentElement.dataset.theme="lila";
 const pathname=window.location.pathname.replace(/\/$/,"")||"/";
 const isProtectPage=pathname==="/protect"||new URLSearchParams(window.location.search).get("ritual")==="protect";

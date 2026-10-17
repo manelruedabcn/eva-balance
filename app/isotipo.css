@@ -1,0 +1,70 @@
+/* El isotipo original es horizontal: cada aparición conserva su proporción. */
+.eva-heart,
+.heart-mark {
+  aspect-ratio: 451 / 161;
+  height: auto;
+  -webkit-mask-image: url("/isotipo-eva.svg");
+  mask-image: url("/isotipo-eva.svg");
+}
+
+.hero-large-heart {
+  width: min(1040px, 118vw);
+}
+
+.manifesto-strip .eva-heart {
+  width: 42px;
+}
+
+.portrait-caption .eva-heart {
+  width: 56px;
+}
+
+.protect-orbit .eva-heart {
+  width: 260px;
+}
+
+.conversation-cta > .eva-heart {
+  width: 82px;
+}
+
+.portrait-seal .eva-heart {
+  width: 48px;
+}
+
+.product-hero-art .eva-heart {
+  width: 116px;
+}
+
+.bottle-body .eva-heart {
+  width: 66px;
+}
+
+.coming-grid .eva-heart {
+  width: 66px;
+}
+
+.moment-hero::before {
+  aspect-ratio: 451 / 161;
+  width: min(940px, 145vw);
+  -webkit-mask-image: url("/isotipo-eva.svg");
+  mask-image: url("/isotipo-eva.svg");
+}
+
+.moment-heart,
+.moment-note-heart {
+  width: 80px;
+}
+
+@media (width <= 680px) {
+  .manifesto-strip .eva-heart {
+    width: 32px;
+  }
+
+  .protect-orbit .eva-heart {
+    width: 185px;
+  }
+
+  .hero-large-heart {
+    width: 150vw;
+  }
+}
