@@ -17,6 +17,7 @@ export default defineConfig({
         productos: resolve(__dirname, "productos/index.html"),
         privacidad: resolve(__dirname, "privacidad/index.html"),
         blog: resolve(__dirname, "blog/index.html"),
+        sobreEva: resolve(__dirname, "sobre-eva/index.html"),
         ...blogInputs,
       },
     },
