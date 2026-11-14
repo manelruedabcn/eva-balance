@@ -10,6 +10,7 @@ const routes = [
   ["/privacidad/", "dist/privacidad/index.html"],
   ["/sesiones/", "dist/sesiones/index.html"],
   ["/sobre-eva/", "dist/sobre-eva/index.html"],
+  ["/la-nueva-terapia-barcelona/", "dist/la-nueva-terapia-barcelona/index.html"],
   ["/blog/", "dist/blog/index.html"],
   ...posts.map(post=>[`/blog/${post.slug}/`,`dist/blog/${post.slug}/index.html`]),
 ];
