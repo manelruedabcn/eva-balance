@@ -6,6 +6,7 @@ import {ProductsPage} from "../app/ProductsPage";
 import {SessionsPage} from "../app/SessionsPage";
 import {PrivacyPage} from "../app/PrivacyPage";
 import {AboutPage} from "../app/AboutPage";
+import {LntPage} from "../app/LntPage";
 import {BlogArticle,BlogIndex,getBlogPost} from "../app/BlogPages";
 
 const pages: Record<string, React.ComponentType> = {
@@ -15,6 +16,7 @@ const pages: Record<string, React.ComponentType> = {
   "/sesiones/": SessionsPage,
   "/privacidad/": PrivacyPage,
   "/sobre-eva/": AboutPage,
+  "/la-nueva-terapia-barcelona/": LntPage,
 };
 
 export function render(pathname: string) {

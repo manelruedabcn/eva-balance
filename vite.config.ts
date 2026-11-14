@@ -18,6 +18,7 @@ export default defineConfig({
         privacidad: resolve(__dirname, "privacidad/index.html"),
         blog: resolve(__dirname, "blog/index.html"),
         sobreEva: resolve(__dirname, "sobre-eva/index.html"),
+        lnt: resolve(__dirname, "la-nueva-terapia-barcelona/index.html"),
         ...blogInputs,
       },
     },

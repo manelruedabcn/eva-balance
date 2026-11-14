@@ -17,7 +17,8 @@ entre páginas propias.
 | barras de access precio, precio sesión, sesión de barras de access, sesiones de barras | ~140 | `/blog/barras-de-access-precio/` |
 | terapia barras de access, barra de access terapia, terapia de barras, terapeuta de barras, barras de access cerca de mí | ~350 | `/sesiones/` (servicio + precio + ubicación) |
 | sanación energética, terapeuta energética, terapias energéticas, tipos de terapias energéticas, terapia energética a distancia, terapia de bienestar, terapias naturales y bienestar | ~1.100 | `/blog/terapias-energeticas-sanacion-energetica/` |
-| terapia energética LNT, la nueva terapia LNT | ~20 | `/blog/que-es-lnt-como-es-una-sesion/` (ya existe) |
+| terapia energética LNT, la nueva terapia LNT, qué es la LNT | ~20 | `/blog/que-es-lnt-como-es-una-sesion/` (ya existe) |
+| la nueva terapia barcelona / sitges, terapia LNT barcelona, terapeuta LNT, sesión LNT precio, LNT a distancia | volumen bajo en el planificador, pero con competencia local real (nov 2026) | `/la-nueva-terapia-barcelona/` (servicio local) |
 
 ## Descartadas (no son servicios de Eva)
 

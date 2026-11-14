@@ -59,7 +59,7 @@ for(const post of posts){
 
 // Sitemap generado automáticamente: cada artículo nuevo de content/blog-posts.json entra solo.
 const latest=posts.map(post=>post.date).sort().at(-1);
-const staticUrls=[["/","1.0",latest],["/sesiones/","0.9",latest],["/sobre-eva/","0.8",latest],["/productos/","0.8",latest],["/protect/","0.5",latest],["/blog/","0.8",latest]];
+const staticUrls=[["/","1.0",latest],["/sesiones/","0.9",latest],["/sobre-eva/","0.8",latest],["/la-nueva-terapia-barcelona/","0.9",latest],["/productos/","0.8",latest],["/protect/","0.5",latest],["/blog/","0.8",latest]];
 const urls=[...staticUrls,...posts.map(post=>[`/blog/${post.slug}/`,"0.7",post.date])];
 await writeFile(resolve("public/sitemap.xml"),`<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
