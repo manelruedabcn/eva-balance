@@ -5,6 +5,7 @@ import {ProtectLanding} from "../app/ProtectLanding";
 import {ProductsPage} from "../app/ProductsPage";
 import {SessionsPage} from "../app/SessionsPage";
 import {PrivacyPage} from "../app/PrivacyPage";
+import {AboutPage} from "../app/AboutPage";
 import {BlogArticle,BlogIndex,getBlogPost} from "../app/BlogPages";
 
 const pages: Record<string, React.ComponentType> = {
@@ -13,6 +14,7 @@ const pages: Record<string, React.ComponentType> = {
   "/productos/": ProductsPage,
   "/sesiones/": SessionsPage,
   "/privacidad/": PrivacyPage,
+  "/sobre-eva/": AboutPage,
 };
 
 export function render(pathname: string) {

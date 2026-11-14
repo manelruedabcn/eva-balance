@@ -25,7 +25,7 @@ Eva Balance nace para reunir ese acompañamiento con una selección de objetos y
 - Más de 500 sesiones
 - Atención presencial y a distancia
 
-[Conocer la historia de Eva](https://eva-balance.com/sesiones/#sobre-eva)
+[Conocer la historia de Eva](https://eva-balance.com/sobre-eva/)
 
 ## PROTECT
 

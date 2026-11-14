@@ -45,7 +45,7 @@ for(const post of posts){
   const directory=resolve("blog",post.slug);
   await mkdir(directory,{recursive:true});
   const canonical=`https://eva-balance.com/blog/${post.slug}/`;
-  const article={"@context":"https://schema.org","@type":"BlogPosting","headline":post.title,"description":post.description,"datePublished":post.date,"dateModified":post.date,"inLanguage":"es","image":"https://eva-balance.com/og-eva-balance.jpg","articleSection":post.category,"author":{"@type":"Person","@id":"https://eva-balance.com/#eva","name":"Eva Garijo","jobTitle":"Terapeuta LNT® y titulada en Barras de Access (nivel 1)","hasCredential":{"@type":"EducationalOccupationalCredential","name":"Barras de Access · Nivel 1","credentialCategory":"certificate","recognizedBy":{"@type":"Organization","name":"Access Consciousness"}},"url":"https://eva-balance.com/sesiones/#sobre-eva"},"publisher":{"@type":"Organization","name":"Eva Balance","url":"https://eva-balance.com/","logo":{"@type":"ImageObject","url":"https://eva-balance.com/logo-eva-balance-transparent.png"}},"mainEntityOfPage":canonical};
+  const article={"@context":"https://schema.org","@type":"BlogPosting","headline":post.title,"description":post.description,"datePublished":post.date,"dateModified":post.date,"inLanguage":"es","image":"https://eva-balance.com/og-eva-balance.jpg","articleSection":post.category,"author":{"@type":"Person","@id":"https://eva-balance.com/#eva","name":"Eva Garijo","jobTitle":"Terapeuta LNT® y titulada en Barras de Access (nivel 1)","hasCredential":{"@type":"EducationalOccupationalCredential","name":"Barras de Access · Nivel 1","credentialCategory":"certificate","recognizedBy":{"@type":"Organization","name":"Access Consciousness"}},"url":"https://eva-balance.com/sobre-eva/","sameAs":["https://www.instagram.com/evabalance.es/"]},"publisher":{"@type":"Organization","name":"Eva Balance","url":"https://eva-balance.com/","logo":{"@type":"ImageObject","url":"https://eva-balance.com/logo-eva-balance-transparent.png"}},"mainEntityOfPage":canonical};
   // Si el artículo trae preguntas frecuentes, se declaran también como FAQPage.
   const faq=post.faq??[];
   const jsonLd=faq.length?{"@context":"https://schema.org","@graph":[{...article,"@context":undefined},{"@type":"FAQPage","mainEntity":faq.map(item=>({"@type":"Question","name":item.q,"acceptedAnswer":{"@type":"Answer","text":item.a}}))}]}:article;
@@ -59,7 +59,7 @@ for(const post of posts){
 
 // Sitemap generado automáticamente: cada artículo nuevo de content/blog-posts.json entra solo.
 const latest=posts.map(post=>post.date).sort().at(-1);
-const staticUrls=[["/","1.0",latest],["/sesiones/","0.9",latest],["/productos/","0.8",latest],["/protect/","0.5",latest],["/blog/","0.8",latest]];
+const staticUrls=[["/","1.0",latest],["/sesiones/","0.9",latest],["/sobre-eva/","0.8",latest],["/productos/","0.8",latest],["/protect/","0.5",latest],["/blog/","0.8",latest]];
 const urls=[...staticUrls,...posts.map(post=>[`/blog/${post.slug}/`,"0.7",post.date])];
 await writeFile(resolve("public/sitemap.xml"),`<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
