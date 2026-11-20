@@ -1,5 +1,5 @@
 import React from "react";
-import {renderToStaticMarkup} from "react-dom/server";
+import {renderToString} from "react-dom/server";
 import Home from "../app/page";
 import {ProtectLanding} from "../app/ProtectLanding";
 import {ProductsPage} from "../app/ProductsPage";
@@ -21,7 +21,7 @@ const pages: Record<string, React.ComponentType> = {
 
 export function render(pathname: string) {
   const blogPost=getBlogPost(pathname);
-  if(blogPost)return renderToStaticMarkup(<BlogArticle post={blogPost}/>);
+  if(blogPost)return renderToString(<BlogArticle post={blogPost}/>);
   const Page=pathname==="/blog/"?BlogIndex:pages[pathname]??Home;
-  return renderToStaticMarkup(<Page/>);
+  return renderToString(<Page/>);
 }

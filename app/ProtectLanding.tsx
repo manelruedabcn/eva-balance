@@ -3,7 +3,7 @@ export function ProtectLanding() {
     <main className="protect-landing">
       <header className="moment-header">
         <a href="/" aria-label="Volver a Eva Balance">
-          <img src="/logo-eva-balance-transparent.png" alt="Eva Balance" />
+          <img src="/logo-eva-balance.webp" width="640" height="273" alt="Eva Balance" />
         </a>
         <nav aria-label="Navegación de Momento PROTECT">
           <a className="moment-back" href="/">Volver a Eva Balance</a>
@@ -62,7 +62,7 @@ export function ProtectLanding() {
       </section>
 
       <footer className="moment-footer">
-        <img src="/logo-eva-balance-transparent.png" alt="Eva Balance" />
+        <img src="/logo-eva-balance.webp" width="640" height="273" alt="Eva Balance" loading="lazy" decoding="async" />
         <small>© {new Date().getFullYear()} Eva Balance · Tu intención, contigo.</small>
       </footer>
     </main>
