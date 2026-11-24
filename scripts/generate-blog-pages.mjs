@@ -12,7 +12,7 @@ function shell({title,description,canonical,jsonLd}){return `<!doctype html>
     <meta name="robots" content="index, follow" />
     <link rel="describedby" type="text/markdown" href="https://eva-balance.com/llms.txt" />
     <link rel="canonical" href="${canonical}" />
-    <link rel="icon" type="image/svg+xml" href="/heart-eva.svg" />
+    <link rel="icon" type="image/svg+xml" href="/isotipo-eva.svg" />
     <meta property="og:title" content="${title}" />
     <meta property="og:description" content="${description}" />
     <meta property="og:type" content="article" />
